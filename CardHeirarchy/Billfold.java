@@ -27,7 +27,7 @@ public class Billfold
             format += this.card1.format();
             if (this.card2 != null)
             {
-                format += "|" + this.card2.format() + "]";
+                format += "\n|\n" + this.card2.format() + "]";
             }
             else
             {

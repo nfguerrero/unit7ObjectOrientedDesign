@@ -4,6 +4,7 @@ public class DriverLicense extends Card
     
     public DriverLicense(String n, String expYear)
     {
+        super(n);
         this.expYear = expYear;
     }
     
