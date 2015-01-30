@@ -1,9 +1,9 @@
-public class BillforTester
+public class BillfoldTester
 {
     public static void main(String[] args)
     {
         IDCard id = new IDCard("Nic", "12345");
-        DriverLicense license = new DriverLicense("David", "987");
+        DriverLicense license = new DriverLicense("David", "2015");
         
         Billfold bill = new Billfold();
         

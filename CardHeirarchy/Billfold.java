@@ -21,22 +21,14 @@ public class Billfold
     
     public String formatCards()
     {
-        String format = "[";
+        String format = "";
         if (this.card1 != null)
         {
             format += this.card1.format();
-            if (this.card2 != null)
+            if (this.card2!= null)
             {
-                format += "\n|\n" + this.card2.format() + "]";
+                format += "\n\n" + this.card2.format();
             }
-            else
-            {
-                format += "]";
-            }
-        }
-        else
-        {
-            format += "]";
         }
         return format;
     }
