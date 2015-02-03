@@ -26,4 +26,9 @@ public class Card
    {
       return "Card holder: " + this.name;
    }
+   
+   public String toString()
+   {
+       return "Card[name = " + this.name;
+   }
 }

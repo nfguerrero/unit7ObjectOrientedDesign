@@ -2,6 +2,7 @@ public class Billfold
 {
     private Card card1;
     private Card card2;
+    private int expCards = 0;
     
     public Billfold()
     {
@@ -17,6 +18,10 @@ public class Billfold
         {
             this.card2 = card;
         }
+        if (card.isExpired())
+        {
+            expCards++;
+        }
     }
     
     public String formatCards()
@@ -31,5 +36,10 @@ public class Billfold
             }
         }
         return format;
+    }
+    
+    public int getExpiredCardCount()
+    {
+        return this.expCards;
     }
 }
