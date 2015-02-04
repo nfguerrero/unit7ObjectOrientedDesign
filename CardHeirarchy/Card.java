@@ -29,6 +29,21 @@ public class Card
    
    public String toString()
    {
-       return "Card[name = " + this.name;
+       return "Card[name = " + this.name + "]";
+   }
+   
+   public boolean equals(Card object)
+   {
+       boolean cardEquals = false;
+       
+       if (object.getClass().equals(object.getClass()))
+       {
+           if (this.format().equals(object.format()))
+           {
+               cardEquals = true;
+           }
+       }
+       
+       return cardEquals;
    }
 }
