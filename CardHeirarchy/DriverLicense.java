@@ -20,18 +20,24 @@ public class DriverLicense extends Card
     
     public boolean isExpired()
     {
-        if (calendar.get(Calendar.YEAR) >= Double.parseDouble(this.expYear))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return (calendar.get(Calendar.YEAR) >= Double.parseDouble(this.expYear));
     }
     
     public String toString()
     {
         return "DriverLicense[name = " + super.getName() + "][expiration year = " + this.expYear + "]";
     }
+    
+    public boolean equals(Card object)
+   {
+       if (this.getClass() == object.getClass())
+       {
+           DriverLicense cardObject = (DriverLicense) object;
+           return this.format().equals(cardObject.format());
+       }
+       else
+       {
+           return false;
+       }
+   }
 }

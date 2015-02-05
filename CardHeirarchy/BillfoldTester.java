@@ -12,6 +12,8 @@ public class BillfoldTester
             System.out.println(license);
         DriverLicense nicLicense = new DriverLicense("Nic", "2016");
             System.out.println(nicLicense + "\n");
+            
+        //System.out.println(license.equals(nicLicense) + "\n");
         
         Billfold bill = new Billfold();
         

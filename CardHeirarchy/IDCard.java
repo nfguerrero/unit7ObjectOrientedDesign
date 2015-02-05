@@ -21,16 +21,14 @@ public class IDCard extends Card
     
     public boolean equals(Card object)
    {
-       boolean idcardEquals = false;
-       
-       if (object.getClass().equals(object.getClass()))
+       if (this.getClass() == object.getClass())
        {
-           if (this.format().equals(object.format()))
-           {
-               idcardEquals = true;
-           }
+           IDCard cardObject = (IDCard) object;
+           return this.format().equals(cardObject.format());
        }
-       
-       return idcardEquals;
+       else
+       {
+           return false;
+       }
    }
 }

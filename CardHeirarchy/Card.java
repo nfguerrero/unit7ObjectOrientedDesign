@@ -32,18 +32,16 @@ public class Card
        return "Card[name = " + this.name + "]";
    }
    
-   public boolean equals(Card object)
+   public boolean equals(Object object)
    {
-       boolean cardEquals = false;
-       
-       if (object.getClass().equals(object.getClass()))
+       if (this.getClass() == object.getClass())
        {
-           if (this.format().equals(object.format()))
-           {
-               cardEquals = true;
-           }
+           Card cardObject = (Card) object;
+           return this.format().equals(cardObject.format());
        }
-       
-       return cardEquals;
+       else
+       {
+           return false;
+       }
    }
 }

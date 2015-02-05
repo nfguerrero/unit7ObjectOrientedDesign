@@ -22,4 +22,17 @@ public class CallingCard extends Card
         return "CallingCard[name = " + super.getName() + "][card number = " + this.cardNumber
                 + ", pin = " + this.pin + "]"; 
     }
+    
+    public boolean equals(Card object)
+   {
+       if (this.getClass() == object.getClass())
+       {
+           CallingCard cardObject = (CallingCard) object;
+           return this.format().equals(cardObject.format());
+       }
+       else
+       {
+           return false;
+       }
+   }
 }
