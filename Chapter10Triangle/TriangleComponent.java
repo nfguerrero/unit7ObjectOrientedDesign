@@ -11,27 +11,41 @@ public class TriangleComponent extends JComponent
     private int y;
     private int count;
     private Point2D.Double[] points;
-    private Graphics2D g2;
     
-    public void paintComponent(Graphics g)
+    public TriangleComponent()
     {
-        this.g2 = (Graphics2D) g;
-        
         this.x = getWidth();
         this.y = getHeight();
         this.count = 0;
         this.points = new Point2D.Double[3];
+        
+        MyMouseListener listener = new MyMouseListener();
+        this.addMouseListener(listener);
+    }
+    
+    public void paintComponent(Graphics g)
+    {
+        Graphics2D g2 = (Graphics2D) g;
+        
+        if (this.count > 0 && this.count < 4)
+        {
+            Dot dot = new Dot(this.points[this.count-1]);
+            dot.draw(g2);
+        }
+   
     }
     
     public class MyMouseListener implements MouseListener
     {
         public void mouseClicked(MouseEvent event)
         {
-            if (count == 0)
-            {
-                Dot dot = new Dot(event.getX(), event.getY());
-                dot.draw(g2);
-            }
+            count++;
+            points[count-1] = new Point2D.Double(event.getX(), event.getY());
+            
+            if (count < 4){count++;}
+            else {count = 0;}
+            
+            repaint();
         }
         
         public void mousePressed(MouseEvent event){}

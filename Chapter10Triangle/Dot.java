@@ -1,16 +1,23 @@
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
+import java.awt.geom.Point2D;
 
 public class Dot
 {
     private int x;
     private int y;
-    private final int RAD = 3; 
+    private final int RAD = 10; 
     
     public Dot(int x, int y)
     {
         this.x = x;
         this.y = y;
+    }
+    
+    public Dot(Point2D.Double point)
+    {
+        this.x = (int) Math.round(point.getX());
+        this.y = (int) Math.round(point.getY());
     }
     
     public void draw(Graphics2D g2)
