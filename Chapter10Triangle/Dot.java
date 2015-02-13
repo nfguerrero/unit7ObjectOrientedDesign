@@ -6,7 +6,7 @@ public class Dot
 {
     private int x;
     private int y;
-    private final int RAD = 10; 
+    private final int RAD = 2; 
     
     public Dot(int x, int y)
     {

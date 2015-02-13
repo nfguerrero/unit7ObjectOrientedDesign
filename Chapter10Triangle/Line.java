@@ -9,8 +9,8 @@ public class Line
     
     public Line(Point2D.Double p1, Point2D.Double p2)
     {
-        this.p1.setLocation(p1.getX(), p1.getY());
-        this.p2.setLocation(p2.getX(), p2.getY());
+        this.p1 = new Point2D.Double(p1.getX(), p1.getY());
+        this.p2 = new Point2D.Double(p2.getX(), p2.getY());
     }
     
     public void draw(Graphics2D g2)
