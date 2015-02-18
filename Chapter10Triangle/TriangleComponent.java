@@ -9,7 +9,6 @@ public class TriangleComponent extends JComponent
 {
     private int count;
     private Point2D.Double[] points;
-    private boolean pass;
     
     public TriangleComponent()
     {
@@ -28,7 +27,7 @@ public class TriangleComponent extends JComponent
     {
         Graphics2D g2 = (Graphics2D) g;
         
-        if (this.count >= 0 && this.pass)
+        if (this.count >= 0)
         {
             Dot dot1 = new Dot(this.points[0]);
             dot1.draw(g2);
@@ -59,8 +58,6 @@ public class TriangleComponent extends JComponent
     {
         public void mouseClicked(MouseEvent event)
         {
-            pass = true;
-            
             if (count < 2){count++;}
             else {count = 0;}
             
