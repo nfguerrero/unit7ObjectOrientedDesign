@@ -1,3 +1,19 @@
+Activity 5:
+1. Buggy1:
+    Constructor or Method: isEmpty Method
+    Possible Code Error: return size != 0
+    
+2. Buggy2:
+    Constructor or Method: Deck Constructor
+    Possible Code Error: size = cards.size()-1
+    
+3. Buggy3:
+    Constructor or Method: shuffle Method
+    Possible Code Error: Doesn't change the cards ArrayList, but rather, a shuffled ArrayList in the method
+    
+4. Buggy4:
+    Constructor or Method:    
+
 Activity 6:
 1. 5spades,6clubs - 5clubs, 6clubs
 
