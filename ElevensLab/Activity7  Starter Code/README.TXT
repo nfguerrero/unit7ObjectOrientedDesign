@@ -12,7 +12,8 @@ Activity 5:
     Possible Code Error: Doesn't change the cards ArrayList, but rather, a shuffled ArrayList in the method
     
 4. Buggy4:
-    Constructor or Method:    
+    Constructor or Method: deal Method
+    Possible Code Error: return null if !isEmpty, rather than isEmpty
 
 Activity 6:
 1. 5spades,6clubs - 5clubs, 6clubs
